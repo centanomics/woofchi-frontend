@@ -6,9 +6,7 @@ import { getGuildName } from '../actions/woofchi';
 
 const Guild = ({ woofChi: { guildName }, getGuildName, location }) => {
   // const [guildName, setGuildName] = useState('');
-  const [guildId, setGuildId] = useState(
-    location.search.substring(location.search.indexOf('=') + 1)
-  );
+  const guildId = location.search.substring(location.search.indexOf('=') + 1);
 
   useEffect(() => {
     getGuildName(guildId);
