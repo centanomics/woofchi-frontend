@@ -1,3 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({});
+import woofchiReducer from './woofchiReducer';
+
+export default combineReducers({
+  woofChi: woofchiReducer,
+});
