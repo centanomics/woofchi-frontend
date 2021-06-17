@@ -8,6 +8,7 @@ const Guild = ({ match, history, location }) => {
   useEffect(() => {
     setGuildId(rawGId);
     console.log(guildId);
+    // eslint-disable-next-line
   }, []);
 
   return <div>WoofChi - Guild</div>;
