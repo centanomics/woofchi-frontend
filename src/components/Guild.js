@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-import woofChi from '../utils/woofChi';
-
-const setName = async (guildId) => {
-  let gName = await woofChi.getGuildName(guildId);
-  return gName;
-};
-
 const Guild = ({ match, history, location }) => {
-  const [gName, setGName] = useState('');
+  // const [guildName, setGuildName] = useState('');
+  const [guildId, setGuildId] = useState('');
+  const rawGId = location.search.substring(location.search.indexOf('=') + 1);
+
   useEffect(() => {
-    let guildId = location.search.substring(location.search.indexOf('=') + 1);
-    let guildName = setName(guildId);
-    setGName(guildName);
-    // eslint-disable-next-line
+    setGuildId(rawGId);
+    console.log(guildId);
   }, []);
 
-  return <div>WoofChi - {gName}</div>;
+  return <div>WoofChi - Guild</div>;
 };
 
 export default Guild;
