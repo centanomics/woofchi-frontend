@@ -24,3 +24,12 @@ export const getGuildName = (guildId) => async (dispatch) => {
     console.log(err);
   }
 };
+
+// gets all of the users listed from highest to lowest rating
+
+export const getGuildRatings = (guildId) => async (dispatch) => {
+  try {
+  } catch (err) {
+    console.log(err);
+  }
+};
