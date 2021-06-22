@@ -13,7 +13,7 @@ export const getGuildName = (guildId) => async (dispatch) => {
   try {
     setLoading();
     const res = await axios.get(
-      `${process.env.REACT_APP_WOOFCHI_SERVER_DEV}/api/guilds/${guildId}`
+      `${process.env.REACT_APP_WOOFCHI_SERVER_DEV}/api/guilds/guildName/${guildId}`
     );
     const data = await res.data;
     dispatch({

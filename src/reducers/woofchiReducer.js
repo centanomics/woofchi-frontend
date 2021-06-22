@@ -11,7 +11,7 @@ const woofchiReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        guildName: action.payload.guildName,
+        guildName: action.payload,
       };
     case SET_LOADING:
       return {
