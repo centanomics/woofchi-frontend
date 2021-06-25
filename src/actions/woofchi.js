@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_GUILD_NAME, SET_LOADING } from './types';
+import { GET_GUILD_NAME, SET_LOADING, GET_GUILD_RATINGS } from './types';
 
 // set loading to true
 export const setLoading = () => {
@@ -29,6 +29,15 @@ export const getGuildName = (guildId) => async (dispatch) => {
 
 export const getGuildRatings = (guildId) => async (dispatch) => {
   try {
+    setLoading();
+    const res = await axios.get(
+      `${process.env.REACT_APP_WOOFCHI_SERVER_DEV}/api/guilds/ratings/${guildId}`
+    );
+    const data = await res.data;
+    dispatch({
+      type: GET_GUILD_RATINGS,
+      payload: data,
+    });
   } catch (err) {
     console.log(err);
   }
