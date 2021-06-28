@@ -2,9 +2,14 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { getGuildName } from '../actions/woofchi';
+import { getGuildName, getGuildRatings } from '../actions/woofchi';
 
-const Guild = ({ woofChi: { guildName }, getGuildName, location }) => {
+const Guild = ({
+  woofChi: { guildName },
+  getGuildName,
+  getGuildRatings,
+  location,
+}) => {
   // const [guildName, setGuildName] = useState('');
   const guildId = location.search.substring(location.search.indexOf('=') + 1);
 
@@ -26,4 +31,6 @@ const mapStateToProps = (state) => ({
   woofChi: state.woofChi,
 });
 
-export default connect(mapStateToProps, { getGuildName })(Guild);
+export default connect(mapStateToProps, { getGuildName, getGuildRatings })(
+  Guild
+);
