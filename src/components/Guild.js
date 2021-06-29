@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { getGuildName, getGuildRatings } from '../actions/woofchi';
 
 const Guild = ({
-  woofChi: { guildName },
+  woofChi: { guildName, ratings },
   getGuildName,
   getGuildRatings,
   location,
@@ -15,6 +15,7 @@ const Guild = ({
 
   useEffect(() => {
     getGuildName(guildId);
+    getGuildRatings(guildId);
     // eslint-disable-next-line
   }, []);
 
