@@ -19,7 +19,16 @@ const Guild = ({
     // eslint-disable-next-line
   }, []);
 
-  return <div>WoofChi - {guildName || 'Guild'}</div>;
+  return (
+    <div>
+      <h1>WoofChi - {guildName || 'Guild'}</h1>
+      <div>
+        {ratings.map((rating) => {
+          return <div>hi</div>;
+        })}
+      </div>
+    </div>
+  );
 };
 
 Guild.propTypes = {
