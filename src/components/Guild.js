@@ -10,7 +10,6 @@ const Guild = ({
   getGuildRatings,
   location,
 }) => {
-  // const [guildName, setGuildName] = useState('');
   const guildId = location.search.substring(location.search.indexOf('=') + 1);
 
   useEffect(() => {
