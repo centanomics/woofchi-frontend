@@ -10,8 +10,10 @@ const Guild = ({
   getGuildRatings,
   location,
 }) => {
+  //grabs guild id from url
   const guildId = location.search.substring(location.search.indexOf('=') + 1);
 
+  // gets the guild name and ratings on component load
   useEffect(() => {
     getGuildName(guildId);
     getGuildRatings(guildId);
