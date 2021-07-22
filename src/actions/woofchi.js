@@ -34,6 +34,7 @@ export const getGuildRatings = (guildId) => async (dispatch) => {
       `${process.env.REACT_APP_WOOFCHI_SERVER_DEV}/api/guilds/ratings/${guildId}`
     );
     const data = await res.data;
+    console.log(data);
     dispatch({
       type: GET_GUILD_RATINGS,
       payload: data,

@@ -23,11 +23,21 @@ const Guild = ({
   return (
     <div>
       <h1>WoofChi - {guildName || 'Guild'}</h1>
-      <div>
-        {ratings.map((rating) => {
-          return <div>hi</div>;
-        })}
-      </div>
+      <section>
+        <h2>Rating</h2>
+        <div>
+          {ratings.map((rating, index) => (
+            <p key={rating.user}>
+              <span>{index + 1}</span>
+              <span>
+                <img src={rating.avatar} />
+              </span>
+              <span>{rating.name}</span>
+              <span>{rating.avg} stars</span>
+            </p>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
