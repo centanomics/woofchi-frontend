@@ -9,4 +9,3 @@ Front end site for woofchi bot
 - more info on specific users
   - how many ratings they gave
   - how many people rated them
-  - etc
